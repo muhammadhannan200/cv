@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    -webkit-print-color-adjust: exact;
+
+}
+
+:root{
+    --color:#0075FF;
+}
+
+
+.A4{
+    background-image: url(../images/Asset1.png) , url(../images/Asset2.png);
+
+    background-repeat: no-repeat; 
+
+    background-position:top left ,right bottom;
+    
+}
+  
+header{
+
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content:space-around;
+
+    align-items: center;
+
+
+}
+header .content{
+    flex-basis: 30%;
+}
+header .content img{
+    width: 60%;
+    margin-left: 50px;
+    border: 5px solid var(--color);
+    border-radius: 50%;
+}
+
+.text{
+  
+    flex-basis: 60%;
+    justify-content: flex-end; 
+     
+}
+.text h1,.text h3{
+    width: fit-content;
+}
+.text h1{
+    position: relative;
+    flex-basis: 100%;
+    color: #333;
+    margin-bottom: 30px;
+    font-size:30px;
+}
+.text h1:after {
+    content: "";
+    position: absolute;
+    background-color: var(--color) !important;
+    width: 200px;
+    height: 8px;
+    top: 20px;
+    left: 500px;
+}
+.text h3 {
+    flex-basis: 100%;
+    color: var(--color);
+    margin-bottom: 30px;
+
+}
+
+
+.text p{
+
+}
+
+.social{
+    background-color: #ddd;
+    color: #333;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.social i{
+    color: var(--color);
+}
+.social span{
+    color: black;
+    margin-left: 15px;
+}
+@media print {
+    .social {
+        padding: 20px;
+    }
+    .social span {
+        font-size: 15px;
+    }
+}
+
+.cv-body {
+  
+
+    background-repeat: no-repeat;
+
+    padding:60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cv-body .box h3{
+    color: var(--color);
+    margin-bottom: 30px;
+
+}
+.cv-body h2{
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    /* width:fit-content; */
+    background-color: var(--color);
+    color: white;
+    padding: 5px;
+    /* padding-left: 50px; */
+    flex-basis: calc(75%);
+    text-align: center;
+        
+    
+}
+.cv-body h3{
+    font-size: 40px;
+    text-transform: capitalize;
+}
+.cv-body h4{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.cv-body .box{
+flex-basis: calc(50% - 40px);
+margin-bottom: 30px;
+padding-left: 20px;
+margin-left: 10px;
+}
+.cv-body .box:nth-child(even){
+    border-left:5px solid var(--color) ;
+
+}
+.cv-body .box p{
+    color: #a0a0a0dd;
+    line-height: 1.4;
+}
+.cv-body.language span:not(:last-child) {
+    display: inline-block;
+}
+
+
+
+.cv-body.lists{
+    padding:60px;
+display: block;}
+
+
+.cv-body.lists .lis{
+    display: flex;
+    justify-content: flex-start ;
+    align-items: center;
+}
+    .cv-body.lists .lis ul{
+        /* flex-basis: 40%; */
+    }
+.cv-body.lists ul {
+    list-style: none; /* Remove default bullets */
+  }
+  .cv-body.lists ul{
+    margin-left: 30px;
+  }
+  
+.cv-body.lists ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--color); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+.cv-body.lists h2{
+    width: 75%;
+}
